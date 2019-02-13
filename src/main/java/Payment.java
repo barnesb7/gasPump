@@ -1,11 +1,11 @@
 public class Payment {
 
     private String paymentType;
-    private double amountPayed;
+    private double amountPaid;
 
-    public Payment(String paymentType, double amountPayed){
+    public Payment(String paymentType, double amountPaid){
         this.paymentType = paymentType;
-        this.amountPayed = amountPayed;
+        this.amountPaid = amountPaid;
     }
 
     public String getPaymentType() {
@@ -17,10 +17,10 @@ public class Payment {
     }
 
     public double getAmountPayed() {
-        return amountPayed;
+        return amountPaid;
     }
 
-    public void setAmountPayed(double amountPayed) {
-        this.amountPayed = amountPayed;
+    public void setAmountPayed(double amountPaid) {
+        this.amountPaid = amountPaid;
     }
 }

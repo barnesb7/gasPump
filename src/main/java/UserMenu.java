@@ -29,4 +29,10 @@ public class UserMenu {
         System.out.println("Thank you for visiting.");
     }
 
+    public void showPaymentTypeMenu(){
+        System.out.println("What type of payment is this prepayment: \n" +
+                            "[1] Cash \n" +
+                            "[2] Card");
+    }
+
 }
