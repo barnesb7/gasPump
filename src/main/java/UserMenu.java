@@ -8,7 +8,7 @@ public class UserMenu {
     }
 
     public void showPrepayMenu(){
-        System.out.println("How much would you like to pay?");
+        System.out.println("How much would you like to pay? Please enter amount greater than $0.0.");
     }
 
     public void showPayAtPumpMenu(){
@@ -19,10 +19,9 @@ public class UserMenu {
 
     public void showGasOptionMenu(){
         System.out.println("Choose your gas:" +
-                            "[1] Unleaded 87" +
-                            "[2] Plus 89" +
-                            "[3] Premium 93" +
-                            "[4] Diesel");
+                            "[1] Unleaded 87 $1.65" +
+                            "[2] Plus 89 $2.43" +
+                            "[3] Premium 93 $4.40");
     }
 
     public void showExitOption(){
