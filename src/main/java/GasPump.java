@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class GasPump {
 
-    DecimalFormat decimalFormat = new DecimalFormat();
+    DecimalFormat decimalFormat = new DecimalFormat("####.##");
 
     private Payment currentUserPayment;
 
@@ -29,11 +29,10 @@ public class GasPump {
             double gallonsOnPump = 0.0;
 
             do {
-                System.out.print("Price: " + priceOnPump + "\r");
-//                System.out.print("Gallons: " + gallonsOnPump + "\r ");
+                System.out.print("Price: " + decimalFormat.format(priceOnPump) + " || Gallons: " + decimalFormat.format(gallonsOnPump) + "\r");
 
                 try {
-                    TimeUnit.MICROSECONDS.sleep(1);
+                    TimeUnit.MICROSECONDS.sleep(2);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -42,7 +41,8 @@ public class GasPump {
                 gallonsOnPump += .01;
 
             }while(priceOnPump < currentUserPayment.getAmountPayed());
-        System.out.println("Price: " + currentUserPayment.getAmountPayed());
+
+        System.out.println("Final Price: " + currentUserPayment.getAmountPayed() + " || Final Gallons: " + decimalFormat.format(gallonsOnPump));
         }
     }
 
